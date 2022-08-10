@@ -1,0 +1,17 @@
+:root {
+	--color-white: #FFFFFF;
+	--color-black: #201C28;
+	--color-summer-sky: #43ABF0;
+	--color-blue-zodiac: #3D4050;
+
+	// Цвета для быстрого обращения
+	--color-primary: var(--color-summer-sky);
+	--color-primary--hover: var(--color-medium-slate-blue);
+	--color-primary--active: var(--color-purple-heart);
+	--color-primary--disable: var(--color-fog);
+
+	--color-secondary: var(--color-white-smoke);
+	--color-secondary--hover: var(--color-whisper);
+	--color-secondary--active: var(--color-gainsboro);
+	--color-secondary--disable: var(--color-gainsboro);
+}

@@ -1,0 +1,65 @@
+.footer {
+	width: 100vw;
+	height: 100px;
+	background: var(--color-blue-zodiac);
+	margin-top: 200px;
+
+	color: var(--color-white);
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 120%;
+
+	&__inner {
+		width: 100%;
+		max-width: 1170px;
+		padding: 0 35px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: auto;
+	}
+
+	&__copyright,
+	&__pay-info,
+	&__links {
+		width: 33%;
+	}
+
+	&__pay-info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-left: 1px solid var(--color-white);
+		border-right: 1px solid var(--color-white);
+		padding: 0 40px;
+
+		&-el {
+			display: inline-block;
+		}
+	}
+
+	&__links {
+		text-align: right;
+	}
+
+	.link,
+	.link:visited {
+		color: var(--color-white);
+		text-align: right;
+
+		&:hover {
+			color: var(--color-primary);
+		}
+
+		&:active {
+			// Не успел разобраться, как в angular'е правильно обозначать переменные
+			// в обычных проектах это выглядит $color-primay, а не var(--color-primary)
+			color: darken(#43ABF0, 10%);
+		}
+	}
+
+	.link + .link {
+		margin-left: 38px;
+	}
+}

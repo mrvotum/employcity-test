@@ -1,0 +1,46 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100px;
+	background: rgba(16, 16, 29, 0.9);
+
+	&__inner {
+		width: 100%;
+		max-width: 1170px;
+		padding: 0 35px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: auto;
+	}
+
+	.link,
+	.link:visited {
+		color: var(--color-white);
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 13px;
+		line-height: 120%;
+
+		&:hover {
+			color: var(--color-primary);
+		}
+
+		&.is-active {
+			color: var(--color-primary);
+		}
+
+		&:active {
+			// Не успел разобраться, как в angular'е правильно обозначать переменные
+			// в обычных проектах это выглядит $color-primay, а не var(--color-primary)
+			color: darken(#43ABF0, 10%);
+		}
+	}
+
+	.link + .link {
+		margin-left: 60px;
+	}
+}
