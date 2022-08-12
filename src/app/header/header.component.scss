@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .header {
 	position: fixed;
 	left: 0;
@@ -5,10 +7,11 @@
 	width: 100vw;
 	height: 100px;
 	background: rgba(16, 16, 29, 0.9);
+	z-index: 99;
 
 	&__inner {
 		width: 100%;
-		max-width: 1170px;
+		max-width: var(--site-width);
 		padding: 0 35px;
 		height: 100%;
 		display: flex;
@@ -17,8 +20,23 @@
 		margin: auto;
 	}
 
-	.link,
-	.link:visited {
+	&__links {
+		display: flex;
+		margin: 0;
+	}
+
+	// -----
+
+	.link__holder::before {
+		display: none;
+	}
+
+	.link__holder + .link__holder {
+		margin-left: 60px;
+	}
+
+	.link__el,
+	.link__el:visited {
 		color: var(--color-white);
 		font-weight: 600;
 		text-transform: uppercase;
@@ -39,8 +57,93 @@
 			color: darken(#43ABF0, 10%);
 		}
 	}
+}
 
-	.link + .link {
-		margin-left: 60px;
+@include breakpoint(xl) {
+	.header__inner {
+		padding: 0 16px;
+	}
+}
+
+@include breakpoint(md) {
+	.header {
+		height: 60px;
+
+		&__logo {
+			width: 200px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.menu {
+			position: relative;
+		}
+
+		.menu.is-open .burger {
+			transform: rotate(-45deg);
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+				transform: rotate(-90deg);
+			}
+		}
+
+		.burger {
+			position: relative;
+			width: 30px;
+			height: 2px;
+			border-radius: 20px;
+			background-color: var(--color-white);
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 2px;
+				border-radius: 20px;
+				background-color: var(--color-white);
+				left: 0;
+				transition: all 0.2s ease-in-out;
+			}
+
+			&::before {
+				top: 10px;
+			}
+
+			&::after {
+				bottom: 10px;
+			}
+		}
+
+		&__links {
+			position: fixed;
+			display: none;
+			left: 0;
+			top: 60px;
+			width: 100%;
+			height: calc(100% - 60px);
+			background: rgba(16, 16, 29, 0.9);
+			flex-direction: column;
+			padding: 16px;
+			backdrop-filter: blur(4px);
+
+			.is-open & {
+				display: flex;
+			}
+		}
+
+		.link__holder + .link__holder {
+			margin-top: 30px;
+			margin-left: 0;
+		}
 	}
 }

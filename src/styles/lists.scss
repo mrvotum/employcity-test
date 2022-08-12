@@ -1,0 +1,40 @@
+ul.list {
+	font-size: 20px;
+	line-height: 120%;
+	font-weight: 400;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 80px;
+
+	li.list__el {
+		position: relative;
+		padding-left: 16px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			height: 2px;
+			width: 5px;
+			background-color: var(--color-black);
+		}
+	}
+
+	+ li.list__el {
+		margin-top: 5px;
+	}
+}
+
+@include breakpoint(sm) {
+	ul.list {
+		font-size: 18px;
+	}
+}
+
+@include breakpoint(xs) {
+	ul.list {
+		margin-bottom: 46px;
+	}
+}

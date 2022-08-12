@@ -3,15 +3,52 @@
 	--color-black: #201C28;
 	--color-summer-sky: #43ABF0;
 	--color-blue-zodiac: #3D4050;
+	--color-dolphin: #6F6D7B;
+	--color-silver: #C3C3C3;
+	--color-silver-2: #BBBBBB;
+	--color-silver-3: #C4C4C4;
+	--color-black-russian: #2A2B30;
+	--color-jaguar: #272733;
+	--color-endeavour: #286690;
 
 	// Цвета для быстрого обращения
 	--color-primary: var(--color-summer-sky);
-	--color-primary--hover: var(--color-medium-slate-blue);
-	--color-primary--active: var(--color-purple-heart);
-	--color-primary--disable: var(--color-fog);
+	// --color-primary--hover: var(--color-medium-slate-blue);
+	// --color-primary--active: var(--color-purple-heart);
+	// --color-primary--disable: var(--color-fog);
 
-	--color-secondary: var(--color-white-smoke);
-	--color-secondary--hover: var(--color-whisper);
-	--color-secondary--active: var(--color-gainsboro);
-	--color-secondary--disable: var(--color-gainsboro);
+	// --color-secondary: var(--color-white-smoke);
+	// --color-secondary--hover: var(--color-whisper);
+	// --color-secondary--active: var(--color-gainsboro);
+	// --color-secondary--disable: var(--color-gainsboro);
+
+	// Переменные
+	--site-width: 1170px;
 }
+
+// (Но в angular, пока, не успел разобраться, как их подключить адекватно, поэтому импортирую в файлы:(( )
+// $breakpoint-xl: 1100px !default;
+// $breakpoint-lg: 1024px !default;
+// $breakpoint-md: 768px !default;
+// $breakpoint-sm: 480px !default;
+// $breakpoint-xs: 360px !default;
+
+// $breakpoints: xl, lg, md, sm, xs;
+
+// @mixin breakpoint($point) {
+// 	@if $point == xl {
+// 		@media (max-width: $breakpoint-xl) { @content; }
+// 	}
+// 	@else if $point == lg {
+// 		@media (max-width: $breakpoint-lg) { @content; }
+// 	}
+// 	@else if $point == md {
+// 		@media (max-width: $breakpoint-md) { @content; }
+// 	}
+// 	@else if $point == sm {
+// 		@media (max-width: $breakpoint-sm) { @content; }
+// 	}
+// 	@else if $point == xs {
+// 		@media (max-width: $breakpoint-xs) { @content; }
+// 	}
+// }

@@ -2,9 +2,12 @@
 @import './styles/normalize';
 // Переменные (пока только цвета)
 @import './styles/variable';
-// Подключен шрифт
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import './styles/mixins';
+@import './styles/buttons';
+@import './styles/typography';
+@import './styles/lists';
 
-html {
-	font-family: 'Lato', sans-serif;
+.lock-page {
+	max-height: 100vh;
+	overflow: hidden;
 }

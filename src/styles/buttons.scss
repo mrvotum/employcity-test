@@ -1,0 +1,45 @@
+.btn {
+	text-transform: uppercase;
+	padding: 15px 30px;
+	border: 1px solid #fff;
+	background-color: #3e9cdc;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 120%;
+	cursor: pointer;
+	min-width: 183px;
+	transition: background-color 0.2s ease-in-out;
+
+	&--long {
+		width: calc(100% / 3 - 30px);
+		font-size: 15px;
+	}
+
+	&:hover {
+		background-color: darken(#3e9cdc, 10%);
+	}
+
+	&:active {
+		background-color: darken(#3e9cdc, 15%);
+	}
+
+	&--white {
+		background-color: var(--color-white);
+		color: var(--color-black-russian);
+		border-color: var(--color-dolphin);
+
+		&:hover {
+			background-color: darken(#ffffff, 10%);
+		}
+
+		&:active {
+			background-color: darken(#ffffff, 15%);
+		}
+	}
+}
+
+// .btn + .btn {
+// 	margin-left: 30px;
+// }

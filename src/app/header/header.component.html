@@ -1,13 +1,26 @@
 <div class="header">
 	<div class="header__inner">
 		<div class="header__logo">
-			<img src="./assets/logo.svg" alt="Lorem logo">
+			<a href="#">
+				<img src="./assets/logo.svg" alt="Lorem logo">
+			</a>
 		</div>
-		<div class="header__links">
-			<a href="#" class="link is-active">Бизнес</a>
-			<a href="#" class="link">О&nbsp;нас</a>
-			<a href="#" class="link">Цены</a>
-			<a href="#" class="link">Оформить заказ</a>
+		<div class="menu" [class.is-open]="menuOpened">
+			<div class="burger" (click)="menuToggle()"></div>
+			<ul class="header__links">
+				<li class="link__holder">
+					<a href="#" class="link__el is-active">Бизнес</a>
+				</li>
+				<li class="link__holder">
+					<a href="#" class="link__el">О&nbsp;нас</a>
+				</li>
+				<li class="link__holder">
+					<a href="#" class="link__el">Цены</a>
+				</li>
+				<li class="link__holder">
+					<a href="#" class="link__el">Оформить заказ</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

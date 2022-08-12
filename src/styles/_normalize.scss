@@ -95,6 +95,8 @@ audio:not([controls]) {
 //    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 
 html {
+    overflow-x: hidden;
+
     @if $legacy_support_for_ie {
         font-size: 100%; // 1
     }
@@ -147,6 +149,17 @@ a {
     &:hover,
     &:active {
         outline: 0;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 }
 

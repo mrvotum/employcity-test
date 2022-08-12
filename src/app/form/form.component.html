@@ -1,0 +1,41 @@
+<div class="form">
+	<div class="form__line">
+		<div class="select">
+			<div class="select-styled" [class.is-active]="selectIsOpen" (click)="toggleSelect()">Выберите тип системы</div>
+			<div class="select-options" [class.hidden]="!selectIsOpen">
+				<ul (click)="toggleSelect()">
+					<li rel="lorem1">Sed ut perspiciatis</li>
+					<li rel="lorem2">Nemo enim ipsam</li>
+					<li rel="lorem3">Et harum quidem</li>
+					<li rel="lorem4">Temporibus autem</li>
+					<li rel="lorem5">Itaque earum rerum</li>
+					<li rel="lorem6">Itaque earum rerum</li>
+					<li rel="lorem7">Itaque earum rerum</li>
+					<li rel="lorem8">Itaque earum rerum</li>
+					<li rel="lorem9">Itaque earum rerum</li>
+					<li rel="lorem10">Itaque earum rerum</li>
+					<li rel="lorem11">Itaque earum rerum</li>
+					<li rel="lorem12">Itaque earum rerum</li>
+				</ul>
+			</div>
+		</div>
+		<input type="email" name="user-email" id="user-email" placeholder="Ваш e-mail">
+		<input type="text" name="user-name" id="user-name" placeholder="Ваше имя">
+	</div>
+	<div class="form__line">
+
+		<div class="range-input">
+			<div class="range-input__info">
+				<span class="range-input__title">Sed ut perspiciatis, unde omnis iste natus</span>
+				<span class="range-input__value">{{ rangeValue }} %</span>
+			</div>
+			<input class="range-input__range" type="range" [(ngModel)]="rangeValue" min="0" max="100">
+		</div>
+
+		<input class="hidden" type="file" name="pinned-file" id="pinned-file">
+		<label class="pin-file" for="pinned-file"><span>Прикрепить файл</span></label>
+	</div>
+	<div class="form__line">
+		<button class="btn btn--long">Отправить</button>
+	</div>
+</div>

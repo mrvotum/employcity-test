@@ -1,0 +1,154 @@
+@import '../../styles/mixins.scss';
+
+.timeline {
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	margin-bottom: em(80px, 18px);
+
+	&__block {
+		flex-shrink: 0;
+		width: 20%;
+		max-width: em(210px, 18px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__icon {
+		width: em(100px, 18px);
+		height: em(100px, 18px);
+		border: 5px solid var(--color-endeavour);
+		border-radius: 100px;
+		background-color: var(--color-primary);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: em(16px, 18px);
+		line-height: 120%;
+		text-align: center;
+		color: var(--color-white);
+		margin-top: 20px;
+		padding: 0 6px;
+	}
+
+	&__path {
+		position: relative;
+		flex-basis: 100%;
+		z-index: -1;
+
+		&::before {
+			position: absolute;
+			content: "";
+			width: calc(100% + 59px);
+			left: -30px;
+			top: em(50px, 18px);
+			border-top: 6px dotted var(--color-silver-3);
+		}
+	}
+}
+
+@include breakpoint(lg) {
+	.timeline {
+		font-size: 17px;
+	}
+}
+
+@include breakpoint(md) {
+	.hide-md {
+		display: none;
+	}
+
+	.timeline {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 690px) {
+	.timeline {
+		flex-wrap: wrap;
+
+		&__block {
+			width: 30%;
+
+			&:nth-last-child(3) {
+				margin-left: 15%;
+				margin-top: 20px;
+			}
+
+			&:last-child {
+				margin-right: 15%;
+				margin-top: 20px;
+			}
+		}
+
+		&__path {
+			position: relative;
+			flex-basis: 5%;
+			z-index: -1;
+
+			&:nth-last-child(4) {
+				display: none;
+			}
+
+			&:nth-last-child(2) {
+				margin-top: 20px;
+			}
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: calc(100% + 59px);
+				left: -30px;
+				top: em(50px, 18px);
+				border-top: 6px dotted var(--color-silver-3);
+			}
+		}
+	}
+}
+
+@include breakpoint(xs) {
+	.timeline {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&__block {
+			width: 100%;
+
+			&:nth-last-child(3) {
+				margin-left: 0;
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+				margin-top: 0;
+			}
+		}
+
+		&__title {
+			margin-top: 8px;
+		}
+
+		&__path {
+			margin: 20px 0;
+
+			&:nth-last-child(4) {
+				display: block;
+			}
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: calc(100% + 59px);
+				left: -30px;
+				top: em(50px, 18px);
+				border-top: 6px dotted var(--color-silver-3);
+			}
+		}
+	}
+}

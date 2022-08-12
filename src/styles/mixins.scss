@@ -1,0 +1,40 @@
+// (Но в angular, пока, не успел разобраться, как их подключить адекватно, поэтому импортирую в файлы:(( )
+$breakpoint-xl: 1100px !default;
+$breakpoint-lg: 1024px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-sm: 480px !default;
+$breakpoint-xs: 360px !default;
+
+$breakpoints: xl, lg, md, sm, xs;
+
+@mixin breakpoint($point) {
+	@if $point == xl {
+		@media (max-width: $breakpoint-xl) { @content; }
+	}
+	@else if $point == lg {
+		@media (max-width: $breakpoint-lg) { @content; }
+	}
+	@else if $point == md {
+		@media (max-width: $breakpoint-md) { @content; }
+	}
+	@else if $point == sm {
+		@media (max-width: $breakpoint-sm) { @content; }
+	}
+	@else if $point == xs {
+		@media (max-width: $breakpoint-xs) { @content; }
+	}
+}
+
+// -----
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+/// Convert value to em.
+@function em($size, $base-font-size:18px) {
+    @return strip-unit($size) / strip-unit($base-font-size) * 1em;
+}
