@@ -157,10 +157,8 @@ input[type="email"],
 		margin: 0;
 
 		/* Firefox */
-		& {
-			scrollbar-width: thin;
-			scrollbar-color: var(--color-primary) var(--color-blue-zodiac);
-		}
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-primary) var(--color-blue-zodiac);
 
 		/* Chrome, Edge и Safari */
 		&::-webkit-scrollbar {
@@ -226,6 +224,8 @@ input[type="email"],
 		position: relative;
 		border-radius: 20px;
 		background-color: rgba(white, 0.7);
+		height: 6px;
+		border: 1px solid var(--color-white);
 
 		&:focus {
 		  outline: none;
@@ -233,8 +233,13 @@ input[type="email"],
 
 		&::-webkit-slider-runnable-track {
 			height: 6px;
-			border: 1px solid var(--color-white);
 			border-radius: 20px;
+		}
+
+		&::-moz-range-thumb {
+			border-radius: 100%;
+			border: 3px solid var(--color-endeavour);
+			background-color: var(--color-primary);
 		}
 
 		&::-webkit-slider-thumb {
