@@ -56,7 +56,7 @@
 
 			@each $icon in $icons {
 				&--#{$icon}::before {
-					background-image: url('/assets/icon_#{$icon}.svg');
+					background-image: url('/assets/icons/icon_#{$icon}.svg');
 				}
 			}
 		}
@@ -103,7 +103,7 @@
 
 		@each $icon in $icons {
 			&--#{$icon}::before {
-				background-image: url('/assets/icon_#{$icon}.svg');
+				background-image: url('/assets/icons/icon_#{$icon}.svg');
 			}
 		}
 	}

@@ -28,7 +28,7 @@
 	}
 
 	&--started::before {
-		background-image: url('../assets/persons.png');
+		background-image: url('../assets/images/persons.png');
 	}
 
 	&--ended {
@@ -37,7 +37,7 @@
 
 		&:before {
 			background-color: var(--color-jaguar);
-			background-image: url('../assets/checkers.png');
+			background-image: url('../assets/images/checkers.png');
 		}
 	}
 }
