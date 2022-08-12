@@ -78,28 +78,17 @@
 @include breakpoint(sm) {
 	.btns-wrapper {
 		justify-content: space-between;
-	}
-
-	.btn {
-		min-width: auto;
-		width: calc(100% / 2 - 15px);
-	}
-
-	.btn + .btn {
-		margin-left: 0;
-	}
-}
-
-@include breakpoint(xs) {
-	.btns-wrapper {
 		flex-direction: column;
 	}
 
 	.btn {
+		min-width: auto;
+		// width: calc(100% / 2 - 15px);
 		width: 100%;
 	}
 
 	.btn + .btn {
+		margin-left: 0;
 		margin-top: 16px;
 	}
 }

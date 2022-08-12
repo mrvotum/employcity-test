@@ -331,7 +331,7 @@ input[type="email"],
 	}
 }
 
-@include breakpoint(xs) {
+@include breakpoint(sm) {
 	.form__line {
 		flex-direction: column;
 	}
@@ -344,6 +344,7 @@ input[type="email"],
 	input[type="email"],
 	.pin-file {
 		width: 100%;
+		max-width: none;
 		margin-bottom: 20px;
 	}
 

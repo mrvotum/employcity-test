@@ -435,6 +435,7 @@ textarea {
     font-size: 100%; // 2
     margin: 0; // 3
     vertical-align: baseline; // 4
+    -webkit-tap-highlight-color: transparent;
     @if $legacy_support_for_ie {
         *vertical-align: middle; // 4
     }
@@ -444,6 +445,7 @@ textarea {
 
 button, input {
     line-height: normal;
+    -webkit-tap-highlight-color: transparent;
 }
 
 // Address inconsistent `text-transform` inheritance for `button` and `select`.
