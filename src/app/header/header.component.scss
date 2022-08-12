@@ -81,7 +81,15 @@
 			position: relative;
 		}
 
-		.menu.is-open .burger {
+		.burger {
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.menu.is-open .burger__line {
 			transform: rotate(-45deg);
 
 			&::before {
@@ -94,7 +102,7 @@
 			}
 		}
 
-		.burger {
+		.burger__line {
 			position: relative;
 			width: 30px;
 			height: 2px;

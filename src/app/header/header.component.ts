@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menuOpened = false;
+  scrollBarWidth = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const body = document.querySelector('body');
+    body?.classList.add(`scroll-width-${this.scrollBarWidth}`);
   }
 
   menuToggle() {

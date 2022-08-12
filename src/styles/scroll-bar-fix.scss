@@ -1,0 +1,9 @@
+@for $space from 10 to 20 {
+	.scroll-width-#{$space} {
+		padding-right: #{$space}px;
+
+		@include breakpoint(md) {
+			padding-right: 0;
+		}
+	}
+}

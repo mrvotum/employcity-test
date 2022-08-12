@@ -6,7 +6,9 @@
 			</a>
 		</div>
 		<div class="menu" [class.is-open]="menuOpened">
-			<div class="burger" (click)="menuToggle()"></div>
+			<div class="burger" (click)="menuToggle()">
+				<div class="burger__line"></div>
+			</div>
 			<ul class="header__links">
 				<li class="link__holder">
 					<a href="#" class="link__el is-active">Бизнес</a>
